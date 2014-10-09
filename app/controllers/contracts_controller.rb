@@ -33,6 +33,6 @@ class ContractsController < ApplicationController
 
 		private
 	def contracts_params
-		params.require(:contract).permit(:name, :length, :artisti_responsibility, :rep_responsibility, :rep_margin, :artist_id)
+		params.require(:contract).permit(:name, :length, :artist_responsibility, :rep_responsibility, :rep_margin, :artist_id)
 	end
 end

@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20141006072328) do
     t.string   "length"
     t.text     "artist_responsibility"
     t.text     "rep_responsibility"
-    t.string   "rep_margin"
+    t.float    "rep_margin"
     t.integer  "artist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20141006072328) do
   create_table "tours", force: true do |t|
     t.datetime "date_time"
     t.string   "location"
-    t.integer  "arist_id"
+    t.integer  "artist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

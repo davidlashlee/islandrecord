@@ -28,6 +28,13 @@ class ToursController < ApplicationController
 		@tour = Tour.find(params[:id])
 	end
 
+	def destroy
+		@tours = Tour.find(params[:id])
+		@tours.destroy
+
+	redirect_to '/tours/new', :notice => "Your tour has been deleted"
+	end
+
 	private
 	def tour_params
 		params.require(:tour).permit(:date_time,:location, :artist_id)

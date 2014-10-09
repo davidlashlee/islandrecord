@@ -28,6 +28,14 @@ def index
 		@album = Album.find(params[:id])
 	end
 
+
+	def destroy
+		@album = Album.find(params[:id])
+		@album.destroy
+
+	redirect_to '/albums/new', :notice => "Your album has been deleted"
+	end
+
 			private
 	def album_params
 		params.require(:album).permit(:album_name, :song_name, :artist_id)

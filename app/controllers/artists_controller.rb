@@ -28,9 +28,16 @@ class ArtistsController < ApplicationController
 		@artist = Artist.find(params[:id])
 	end
 
+	def destroy
+		@artist = Artist.find(params[:id])
+		@artist.destroy
+
+	redirect_to '/artists/new', :notice => "Your artists has been deleted"
+	end
+
 			private
 	def artist_params
-		params.require(:Artist).permit(:first_name,:last_name, :rep_id)
+		params.require(:artist).permit(:first_name,:last_name, :rep_id)
 	end
 
 end

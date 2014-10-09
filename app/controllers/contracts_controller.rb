@@ -28,6 +28,13 @@ class ContractsController < ApplicationController
 		@contract = Contract.find(params[:id])
 	end
 
+	def destroy
+		@contracts = Contract.find(params[:id])
+		@contracts.destroy
+
+	redirect_to '/contracts/new', :notice => "Your contract has been deleted"
+	end
+
 		private
 	def contracts_params
 		params.require(:contract).permit(:name, :length, :artisti_responsibility, :rep_responsibility, :rep_margin, :artist_id)

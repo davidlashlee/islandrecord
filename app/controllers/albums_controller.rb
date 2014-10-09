@@ -21,7 +21,7 @@ def index
 	def update
 		@album = Album.find(params[:id])
 		@album.update(album)
-		redirect_to @album
+		redirect_to @albums_path
 	end
 
 	def show

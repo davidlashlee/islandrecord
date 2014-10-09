@@ -21,7 +21,7 @@ class RepsController < ApplicationController
 	def update
 		@rep = Rep.find(params[:id])
 		@rep.update(rep)
-		redirect_to @rep
+		redirect_to @reps_path
 	end
 
 	def show

@@ -21,7 +21,7 @@ class ToursController < ApplicationController
 	def update
 		@tour = Tour.find(params[:id])
 		@tour.update(tour)
-		redirect_to @tour
+		redirect_to @tours_path
 	end
 
 	def show

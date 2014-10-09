@@ -21,7 +21,7 @@ class ContractsController < ApplicationController
 	def update
 		@contract = Contract.find(params[:id])
 		@contract.update(contract)
-		redirect_to @contract
+		redirect_to @contracts_path
 	end
 
 	def show

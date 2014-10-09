@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
 
-def index
+	def index
 		@albums = Album.all
 	end
 
@@ -30,6 +30,6 @@ def index
 
 			private
 	def album_params
-		params.require(:albums).permit(:album_name, :song_name, :artist_id)
+		params.require(:album).permit(:album_name, :song_name, :artist_id)
 	end
 end

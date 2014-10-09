@@ -14,33 +14,47 @@
 ActiveRecord::Schema.define(version: 20141006072328) do
 
   create_table "albums", force: true do |t|
-    t.string "album_name"
-    t.string "song_name"
+    t.string   "album_name"
+    t.string   "song_name"
+    t.integer  "artist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "artist", force: true do |t|
-    t.string "first_name"
-    t.string "last_name"
+  create_table "artists", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "rep_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "contract", force: true do |t|
-    t.string "name"
-    t.string "length"
-    t.text   "artist_responsibility"
-    t.text   "rep_responsibility"
-    t.string "rep_margin"
+  create_table "contracts", force: true do |t|
+    t.string   "name"
+    t.string   "length"
+    t.text     "artist_responsibility"
+    t.text     "rep_responsibility"
+    t.string   "rep_margin"
+    t.integer  "artist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "rep", force: true do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "contact_number"
-    t.string "email"
+  create_table "reps", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "contact_number"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "tour", force: true do |t|
+  create_table "tours", force: true do |t|
     t.datetime "date_time"
     t.string   "location"
+    t.integer  "arist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

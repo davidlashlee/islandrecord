@@ -1,4 +1,4 @@
-class Tours < ActiveRecord::Migration
+class CreateTours < ActiveRecord::Migration
   def change
   	create_table :tour do |t|
   		t.datetime :date_time

@@ -1,4 +1,4 @@
-class Albums < ActiveRecord::Migration
+class CreateAlbums < ActiveRecord::Migration
   def change
   	create_table :album do |t|
   		t.string :album_name

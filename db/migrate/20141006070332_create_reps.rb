@@ -1,4 +1,4 @@
-class Reps < ActiveRecord::Migration
+class CreateReps < ActiveRecord::Migration
   def change
   	create_table :rep do |t|
   		t.string :first_name

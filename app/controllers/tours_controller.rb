@@ -9,7 +9,7 @@ class ToursController < ApplicationController
 	end
 
 	def create
-		@tour = Tour.new(tour)
+		@tour = Tour.new(tour_params)
 		@tour.save
 		redirect_to @tour
 	end
@@ -26,6 +26,11 @@ class ToursController < ApplicationController
 
 	def show
 		@tour = Tour.find(params[:id])
+	end
+
+	private
+	def tour_params
+		params.require(:tour).permit(:date_time,:location, :artist_id)
 	end
 
 end

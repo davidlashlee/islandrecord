@@ -9,7 +9,7 @@ class ContractsController < ApplicationController
 	end
 
 	def create
-		@contract = Contract.new(contract)
+		@contract = Contract.new(contracts_params)
 		@contract.save
 		redirect_to @contract
 	end
@@ -28,4 +28,8 @@ class ContractsController < ApplicationController
 		@contract = Contract.find(params[:id])
 	end
 
+		private
+	def contracts_params
+		params.require(:contracts).permit(:name, :length, :artisti_responsibility, :rep_responsibility, :rep_margin, :artist_id)
+	end
 end

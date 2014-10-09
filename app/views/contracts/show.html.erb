@@ -1,1 +1,34 @@
-show.html.erb
+<p>
+  <strong>Contract Name:</strong>
+  <%= @contract.contract_name %>
+</p>
+ 
+<p>
+  <strong>Contract Length:</strong>
+  <%= @contract.contract_length %>
+</p>
+ 
+<p>
+  <strong>Artist Responsibility</strong>
+  <%= @contract.artist_responsibility %>
+</p>
+
+<p>
+  <strong>Rep Responsibility</strong>
+  <%= @contract.rep_responsibility %>
+</p>
+
+<p>
+  <strong>Rep Margin</strong>
+  <%= @contract.rep_margin%>
+</p>
+
+<p>
+  <strong>Artist ID</strong>
+  <%= @contract.artist_id%>
+</p>
+
+
+
+<%= link_to 'Back', albums_path %>
+| <%= link_to 'Edit', edit_album_path(@album) %>

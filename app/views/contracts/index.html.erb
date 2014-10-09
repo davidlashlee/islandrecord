@@ -1,1 +1,30 @@
-index
+<h1>Listing Contracts</h1>
+ 
+<%= link_to 'New Contract', new_contract_path %> | <%= link_to 'Albums', albums_path %> | <%= link_to 'Artists', artists_path %>| <%= link_to 'Reps', reps_path %> | <%= link_to 'Tours', tours_path %><br><br>
+
+<table>
+  <tr>
+    <th>Contract Name</th>
+    <th>Contract Length</th>
+    <th>Artist Responsibility</th>
+    <th>Rep Responsibility</th>
+    <th>Rep Margin</th>
+    <th>Artist ID</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= contract.contract_name %></td>
+      <td><%= contract.length %> </td>
+      <td><%= contract.artist_responsibility %> </td>
+      <td><%= contract.rep_responsibility %> </td>
+      <td><%= contract.rep_margin %> </td>
+      <td><%= contract.artist_id %> </td>
+      <td><%= link_to 'Show', contract_path(contract) %></td>
+      <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
+      <td><%= link_to 'Destroy', contract_path(contract), method: :delete, data: { confirm: 'Sure?' } %></td>
+    </tr>
+  <% end %>
+
+</table>

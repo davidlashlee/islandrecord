@@ -6,7 +6,8 @@ class CreateContracts < ActiveRecord::Migration
   		t.text :artist_responsibility
   		t.text :rep_responsibility
   		t.string :rep_margin
-  		t.timestamps 
+      t.integer :artist_id 
+      t.timestamps
   end
   end
 end

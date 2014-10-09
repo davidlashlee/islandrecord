@@ -20,8 +20,11 @@ class ContractsController < ApplicationController
 
 	def update
 		@contract = Contract.find(params[:id])
-		@contract.update(contract)
-		redirect_to @contracts_path
+		if @contract.update(contract_params)
+			redirect_to @contract
+		else
+			render 'edit'
+		end
 	end
 
 	def show

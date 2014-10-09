@@ -28,6 +28,13 @@ class RepsController < ApplicationController
 		@rep = Rep.find(params[:id])
 	end
 
+	def destroy
+		@reps = Rep.find(params[:id])
+		@reps.destroy
+
+	redirect_to '/reps/new', :notice => "Your rep has been deleted"
+	end
+
 		private
 	def rep_params
 		params.require(:rep).permit(:first_name,:last_name, :contact_number, :email)

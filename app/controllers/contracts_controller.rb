@@ -20,8 +20,11 @@ class ContractsController < ApplicationController
 
 	def update
 		@contract = Contract.find(params[:id])
-		@contract.update(contract)
-		redirect_to @contracts_path
+		if @contract.update(contract_params)
+			redirect_to @contract
+		else
+			render 'edit'
+		end
 	end
 
 	def show
@@ -36,7 +39,12 @@ class ContractsController < ApplicationController
 	end
 
 		private
+<<<<<<< HEAD
 	def contracts_params
 		params.require(:contract).permit(:name, :length, :artisti_responsibility, :rep_responsibility, :rep_margin, :artist_id)
+=======
+	def contract_params
+		params.require(:contract).permit(:name, :length, :artist_responsibility, :rep_responsibility, :rep_margin, :artist_id)
+>>>>>>> fd59359b426b12649f2c1c5941d8d8a40f7ce131
 	end
 end

@@ -20,8 +20,11 @@ class RepsController < ApplicationController
 
 	def update
 		@rep = Rep.find(params[:id])
-		@rep.update(rep)
-		redirect_to @reps_path
+		if @rep.update(rep_params)
+			redirect_to reps_path
+		else
+			render 'edit'
+		end
 	end
 
 	def show

@@ -1,0 +1,35 @@
+<%= form_for @contract do |f| %>
+  <p>
+    <%= f.label :Contract_name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :Contract_length %><br>
+    <%= f.text_field :length %>
+  </p>
+
+  <p>
+    <%= f.label :Artist_responsibility %><br>
+    <%= f.text_field :artist_responsibility %>
+  </p>
+
+  <p>
+    <%= f.label :Rep_responsibility %><br>
+    <%= f.text_field :rep_responsibility %>
+  </p>
+
+  <p>
+    <%= f.label :Rep_margin %><br>
+    <%= f.text_field :rep_margin %>
+  </p>
+
+  <p>
+    <%= f.label :Artist_id %><br>
+    <%= f.text_field :artist_id %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

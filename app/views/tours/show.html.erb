@@ -1,1 +1,17 @@
-show.html.erb
+<p>
+  <strong>When:</strong>
+  <%= @tour.date_time %>
+</p>
+ 
+<p>
+  <strong>When:</strong>
+  <%= @tour.location %>
+</p> 
+
+<p>
+  <strong>ArtistID:</strong>
+  <%= @tour.artist_id %>
+</p> 
+
+<%= link_to 'Back', tours_path %>
+| <%= link_to 'Edit', edit_tour_path(@tour) %>

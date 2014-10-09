@@ -30,7 +30,7 @@ class ToursController < ApplicationController
 
 	private
 	def tour_params
-		params.require(:tour).permit(:date_time,:location, :artist_id)
+		params.require(:tour).permit(:date_time,:location,:artist_id)
 	end
 
 end

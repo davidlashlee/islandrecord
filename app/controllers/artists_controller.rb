@@ -30,7 +30,7 @@ class ArtistsController < ApplicationController
 
 			private
 	def artist_params
-		params.require(:Artists).permit(:first_name,:last_name, :rep_id)
+		params.require(:Artists).permit(:first_name,:last_name,:rep_id)
 	end
 
 end

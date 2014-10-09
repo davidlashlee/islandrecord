@@ -20,8 +20,12 @@ class ToursController < ApplicationController
 
 	def update
 		@tour = Tour.find(params[:id])
-		@tour.update(tour)
-		redirect_to @tours_path
+
+		if @tour.update(tour_params)
+			redirect_to @tour
+		else
+			render 'edit'
+		end
 	end
 
 	def show

@@ -20,8 +20,11 @@ class AlbumsController < ApplicationController
 
 	def update
 		@album = Album.find(params[:id])
-		@album.update(album)
-		redirect_to @albums_path
+		if @album.update(album_params)
+			redirect_to @album
+		else
+			render 'edit'
+		end
 	end
 
 	def show

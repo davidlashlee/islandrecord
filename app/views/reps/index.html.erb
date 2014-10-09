@@ -2,7 +2,7 @@
 
 <h1>Listing Reps</h1>
  
-<%= link_to 'New Reps', new_rep_path %> | <%= link_to 'Albums', albums_path %> | <%= link_to 'Artists', artists_path %>| <%= link_to 'New Contract', new_contracts_path %> | <%= link_to 'Tours', tours_path %><br><br>
+<%= link_to 'New Reps', new_rep_path %> | <%= link_to 'Albums', albums_path %> | <%= link_to 'Artists', artists_path %>| <%= link_to 'Contracts', contracts_path %> | <%= link_to 'Tours', tours_path %><br><br>
 
 
 <table>
@@ -14,7 +14,7 @@
     <th colspan="3"></th>
   </tr>
  
-  <% @artists.each do |artist| %>
+  <% @reps.each do |rep| %>
     <tr>
       <td><%= rep.first_name %></td>
       <td><%= rep.last_name %> </td>

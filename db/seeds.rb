@@ -6,5 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-artists = Artist.create({ first_name: 'jack', last_name: 'Johnson',},{ first_name: 'Jack', last_name: 'Black',}, { first_name: 'Fever', last_name: 'Ray',})
-rep = Rep.create({first_name: 'Andrew', last_name: 'Tan', contact: '6262152734', email: 'Andrewtanrep@islandrecord.com'}{first_name: 'Sing', last_name: 'Chang', contact: '4956155694', email: 'TheManSingchang@islandrecord.com'})
+artists = Artist.create([{ first_name: 'jack', last_name: 'Johnson'},{ first_name: 'Jack', last_name: 'Black'}, { first_name: 'Fever', last_name: 'Ray'}])
+rep = Rep.create([{first_name: 'Andrew', last_name: 'Tan', contact_number: '6262152734', email: 'Andrewtanrep@islandrecord.com'},{first_name: 'Sing', last_name: 'Chang', contact_number: '4956155694', email: 'TheManSingchang@islandrecord.com'}])
+contract = Contract.create([{ name: 'Island Record Contract with Jack Johnson', length: '2 Years', artist_responsibility: 'Make Albums', rep_responsibility: 'sell stuff', rep_margin: '10', artist_id: '1'}])

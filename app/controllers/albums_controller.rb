@@ -9,7 +9,7 @@ def index
 	end
 
 	def create
-		@album = Album.new(album)
+		@album = Album.new(album_params)
 		@album.save
 		redirect_to @album
 	end
@@ -26,5 +26,10 @@ def index
 
 	def show
 		@album = Album.find(params[:id])
+	end
+
+			private
+	def album_params
+		params.require(:albums).permit(:album_name, :song_name, :artist_id)
 	end
 end

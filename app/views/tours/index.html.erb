@@ -1,1 +1,24 @@
-index.html.erb
+<h1>Listing Tours</h1>
+ 
+<%= link_to 'New Tour', new_tour_path %> | <%= link_to 'Albums', albums_path %> | <%= link_to 'Artists', artists_path %> | <%= link_to 'Contracts', contracts_path %> | <%= link_to 'Reps', reps_path %> <br><br>
+
+<table>
+  <tr>
+    <th>When</th>
+    <th>Where</th>
+    <th>ArtistID</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% tours.each do |tour| %>
+    <tr>
+      <td><%= tour.date_time %></td>
+      <td><%= tour.location %> </td>
+      <td><%= tour.artist_id %> </td>
+      <td><%= link_to 'Show', tour_path(tour) %></td>
+      <td><%= link_to 'Edit', edit_tour_path(tour) %></td>
+      <td><%= link_to 'Destroy', tour_path(tour), method: :delete, data: { confirm: 'Sure?' } %></td>
+    </tr>
+  <% end %>
+
+</table>

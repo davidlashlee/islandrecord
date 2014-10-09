@@ -1,7 +1,7 @@
 class ContractsController < ApplicationController
 
 	def index
-		@contracts = Contracts.all
+		@contracts = Contract.all
 	end
 
 	def new

@@ -1,7 +1,7 @@
 class RepsController < ApplicationController
 
 	def index
-		@reps = Reps.all
+		@reps = Rep.all
 	end
 
 	def new

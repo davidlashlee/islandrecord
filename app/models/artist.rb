@@ -7,4 +7,5 @@ has_many :albums
 
 	def generate_artist
 		@artist = Artist.new
+	end
 end

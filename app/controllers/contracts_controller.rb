@@ -35,7 +35,7 @@ class ContractsController < ApplicationController
 		@contracts = Contract.find(params[:id])
 		@contracts.destroy
 
-	redirect_to '/contracts/new', :notice => "Your contract has been deleted"
+	redirect_to '/contracts', :notice => "Your contract has been deleted"
 	end
 
 		private

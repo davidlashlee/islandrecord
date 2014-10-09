@@ -35,7 +35,7 @@ class RepsController < ApplicationController
 		@reps = Rep.find(params[:id])
 		@reps.destroy
 
-	redirect_to '/reps/new', :notice => "Your rep has been deleted"
+	redirect_to '/reps', :notice => "Your rep has been deleted"
 	end
 
 		private

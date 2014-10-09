@@ -36,7 +36,7 @@ class AlbumsController < ApplicationController
 		@album = Album.find(params[:id])
 		@album.destroy
 
-	redirect_to '/albums/new', :notice => "Your album has been deleted"
+	redirect_to '/albums', :notice => "Your album has been deleted"
 	end
 
 			private

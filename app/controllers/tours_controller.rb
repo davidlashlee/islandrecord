@@ -36,7 +36,7 @@ class ToursController < ApplicationController
 		@tours = Tour.find(params[:id])
 		@tours.destroy
 
-	redirect_to '/tours/new', :notice => "Your tour has been deleted"
+	redirect_to '/tours', :notice => "Your tour has been deleted"
 	end
 
 	private

@@ -35,7 +35,7 @@ class ArtistsController < ApplicationController
 		@artist = Artist.find(params[:id])
 		@artist.destroy
 
-	redirect_to '/artists/new', :notice => "Your artists has been deleted"
+	redirect_to '/artists', :notice => "Your artists has been deleted"
 	end
 
 			private

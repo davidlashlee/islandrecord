@@ -1,1 +1,22 @@
-show.html.erb
+<p>
+  <strong>First Name:</strong>
+  <%= @rep.first_name %>
+</p>
+ 
+<p>
+  <strong>Last Name:</strong>
+  <%= @rep.last_name %>
+</p> 
+
+<p>
+  <strong>Contact Number:</strong>
+  <%= @rep.rep_id %>
+</p> 
+
+<p>
+  <strong>Email:</strong>
+  <%= @rep.rep_id %>
+</p> 
+
+<%= link_to 'Back', reps_path %>
+| <%= link_to 'Edit', edit_rep_path(@rep) %>
